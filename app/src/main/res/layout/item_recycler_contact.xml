@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Leandro"/>
+
+    <TextView
+        android:id="@+id/tvTel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefone: "
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tvTelInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="39883889"
+        app:layout_constraintTop_toTopOf="@id/tvTel"
+        app:layout_constraintStart_toEndOf="@id/tvTel"/>
+    <ImageView
+        android:id="@+id/imgTel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tvTelInfo"
+        app:layout_constraintTop_toTopOf="@id/tvTelInfo"
+        android:src="@drawable/ic_maxima_telefone"/>
+
+    <TextView
+        android:id="@+id/tvCel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Celular: "
+        app:layout_constraintTop_toBottomOf="@id/tvTel"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tvCelInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="62 9 88889888"
+        app:layout_constraintTop_toTopOf="@id/tvCel"
+        app:layout_constraintStart_toEndOf="@id/tvCel"/>
+    <ImageView
+        android:id="@+id/imgCel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tvCelInfo"
+        app:layout_constraintTop_toTopOf="@id/tvCelInfo"
+        android:src="@drawable/ic_maxima_telefone"/>
+
+    <TextView
+        android:id="@+id/tvConjuge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cônjuge: "
+        app:layout_constraintTop_toBottomOf="@id/tvCel"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tvConjugeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Lilian"
+        app:layout_constraintTop_toTopOf="@id/tvConjuge"
+        app:layout_constraintStart_toEndOf="@id/tvConjuge"/>
+
+    <TextView
+        android:id="@+id/tvTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo: "
+        app:layout_constraintTop_toBottomOf="@id/tvConjuge"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tvTipoInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Sócio"
+        app:layout_constraintTop_toTopOf="@id/tvTipo"
+        app:layout_constraintStart_toEndOf="@id/tvTipo"/>
+
+    <TextView
+        android:id="@+id/tvHobbie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time: "
+        app:layout_constraintTop_toBottomOf="@id/tvTipo"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tvHobbieInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Flamengo"
+        app:layout_constraintTop_toTopOf="@id/tvHobbie"
+        app:layout_constraintStart_toEndOf="@id/tvHobbie"/>
+
+
+    <View
+        android:id="@+id/viewSeparator"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHobbieInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-mail: "
+        app:layout_constraintStart_toEndOf="@id/viewSeparator"
+        app:layout_constraintTop_toTopOf="@id/tvTel"/>
+    <TextView
+        android:id="@+id/tvEmailInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="leandro@gmail.com"
+        app:layout_constraintStart_toEndOf="@id/tvEmail"
+        app:layout_constraintTop_toTopOf="@id/tvEmail"/>
+    <ImageView
+        android:id="@+id/imgEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tvEmailInfo"
+        app:layout_constraintTop_toTopOf="@id/tvEmailInfo"
+        android:src="@drawable/ic_maxima_email"/>
+
+    <TextView
+        android:id="@+id/tvNasc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Nasc.: "
+        app:layout_constraintStart_toEndOf="@id/viewSeparator"
+        app:layout_constraintTop_toTopOf="@id/tvCel"/>
+    <TextView
+        android:id="@+id/tvDtNascInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="17/12/1990"
+        app:layout_constraintStart_toEndOf="@id/tvNasc"
+        app:layout_constraintTop_toTopOf="@id/tvNasc"/>
+
+    <TextView
+        android:id="@+id/tvDtNascConjuge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Nasc. Cônjuge: "
+        app:layout_constraintStart_toEndOf="@id/viewSeparator"
+        app:layout_constraintTop_toTopOf="@id/tvConjuge"/>
+    <TextView
+        android:id="@+id/tvDtNascConjugeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="17/12/1990"
+        app:layout_constraintStart_toEndOf="@id/tvDtNascConjuge"
+        app:layout_constraintTop_toTopOf="@id/tvDtNascConjuge"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time: "
+        app:layout_constraintStart_toEndOf="@id/viewSeparator"
+        app:layout_constraintTop_toTopOf="@id/tvTipo"/>
+    <TextView
+        android:id="@+id/tvTimeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Flamengo"
+        app:layout_constraintStart_toEndOf="@id/tvTime"
+        app:layout_constraintTop_toTopOf="@id/tvTime"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

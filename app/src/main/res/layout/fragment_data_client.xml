@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.DataClientFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dados do cliente" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="#C7C7C7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvData" />
+
+            <TextView
+                android:id="@+id/tvCodRazao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="40795 - Máxima" />
+
+            <TextView
+                android:id="@+id/tvFantasy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Máxima Sistemas" />
+
+            <TextView
+                android:id="@+id/tvCpf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="039.039.039-61" />
+
+            <TextView
+                android:id="@+id/tvCnpj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="10.766.206/0002-61" />
+
+            <TextView
+                android:id="@+id/tvRamo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Panificadora" />
+
+            <TextView
+                android:id="@+id/tvEndereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="ROD BR-060" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardData">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contatos" />
+
+            <View
+                android:id="@+id/viewContact"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="#C7C7C7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvData" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewContact"
+                tools:listitem="@layout/item_recycler_contact" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btnStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verificar status do cliente"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/cardContact" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
