@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#F1F1F1"
     android:paddingHorizontal="16dp"
-    tools:context=".presentation.ui.activity.MenuActivity">
+    tools:context=".presentation.ui.activity.MainActivity">
 
     <LinearLayout
         android:id="@+id/linearOne"

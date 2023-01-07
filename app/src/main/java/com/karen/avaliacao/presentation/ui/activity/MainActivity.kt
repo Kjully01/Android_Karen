@@ -7,7 +7,8 @@ import android.widget.Toast
 import com.karen.avaliacao.R
 import com.karen.avaliacao.databinding.ActivityMainBinding
 
-class MenuActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
+
     private var _binding: ActivityMainBinding? = null
     private val binding: ActivityMainBinding get() = _binding!!
 
@@ -26,7 +27,7 @@ class MenuActivity : AppCompatActivity() {
                 imgButton.setImageResource(R.drawable.ic_maxima_pessoas)
                 tvButton.text = "Clientes"
                 card.setOnClickListener {
-                    Intent(this@MenuActivity,DetailsActivity::class.java).also {
+                    Intent(this@MainActivity,DetailsActivity::class.java).also {
                         startActivity(it)
                     }
                 }
@@ -37,7 +38,7 @@ class MenuActivity : AppCompatActivity() {
                 imgButton.setImageResource(R.drawable.ic_maxima_resumo_vendas)
                 tvButton.text = "Resumo de vendas"
                 card.setOnClickListener {
-                    Toast.makeText(this@MenuActivity, "Teste", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@MainActivity, "Teste", Toast.LENGTH_LONG).show()
                 }
             }
         }
@@ -46,7 +47,7 @@ class MenuActivity : AppCompatActivity() {
                 imgButton.setImageResource(R.drawable.ic_maxima_pedido)
                 tvButton.text = "Pedidos"
                 card.setOnClickListener {
-                    Toast.makeText(this@MenuActivity, "Teste", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@MainActivity, "Teste", Toast.LENGTH_LONG).show()
                 }
             }
         }
@@ -55,7 +56,7 @@ class MenuActivity : AppCompatActivity() {
                 imgButton.setImageResource(R.drawable.ic_maxima_ferramentas)
                 tvButton.text = "Feramentas"
                 card.setOnClickListener {
-                    Toast.makeText(this@MenuActivity, "Teste", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@MainActivity, "Teste", Toast.LENGTH_LONG).show()
                 }
             }
         }

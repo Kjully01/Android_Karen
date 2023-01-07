@@ -20,7 +20,7 @@
             android:name="com.karen.avaliacao.presentation.ui.activity.SplashActivity"
             android:exported="false" />
         <activity
-            android:name="com.karen.avaliacao.presentation.ui.activity.MenuActivity"
+            android:name="com.karen.avaliacao.presentation.ui.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

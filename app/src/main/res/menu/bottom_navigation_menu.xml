@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/ic_maxima_pessoa_ativo"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/registration"
+        android:enabled="true"
+        android:icon="@drawable/ic_maxima_historico_pedidos_ativo"
+        android:title="Cadastrar" />
+
+    <item
+        android:id="@+id/favorite"
+        android:enabled="true"
+        android:icon="@drawable/ic_maxima_alvara_ativo"
+        android:title="Favoritos" />
+
+</menu>
