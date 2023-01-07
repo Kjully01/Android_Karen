@@ -2,14 +2,13 @@ package com.karen.avaliacao.presentation.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.AdapterView
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.karen.avaliacao.R
 import com.karen.avaliacao.databinding.ActivityDetailsBinding
 import com.karen.avaliacao.presentation.ui.fragment.DataClientFragment
-import com.karen.avaliacao.presentation.ui.fragment.MenuFragment
+import com.karen.avaliacao.presentation.ui.fragment.AlvaraFragment
 import com.karen.avaliacao.presentation.ui.fragment.PedidoFragment
 
 class DetailsActivity : AppCompatActivity() {
@@ -39,7 +38,7 @@ class DetailsActivity : AppCompatActivity() {
                 //binding.toolbar.title = "Home"
             }
             R.id.registration -> {
-                currentFragment = MenuFragment()
+                currentFragment = AlvaraFragment()
                 //binding.toolbar.title = "Cadastrar"
             }
             R.id.favorite -> {

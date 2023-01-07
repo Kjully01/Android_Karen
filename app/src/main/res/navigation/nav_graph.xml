@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_pedido" />
     <fragment
         android:id="@+id/menuFragment"
-        android:name="com.karen.avaliacao.presentation.ui.fragment.MenuFragment"
+        android:name="com.karen.avaliacao.presentation.ui.fragment.AlvaraFragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_alvara" />
 </navigation>
