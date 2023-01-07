@@ -1,4 +1,4 @@
-package com.karen.avaliacao.view.fragment
+package com.karen.avaliacao.presentation.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

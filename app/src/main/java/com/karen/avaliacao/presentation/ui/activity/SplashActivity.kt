@@ -1,4 +1,4 @@
-package com.karen.avaliacao.view.activity
+package com.karen.avaliacao.presentation.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

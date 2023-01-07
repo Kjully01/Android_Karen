@@ -14,10 +14,13 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".view.activity.SplashActivity"
+            android:name="com.karen.avaliacao.presentation.ui.activity.DetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activity.MainActivity"
+            android:name="com.karen.avaliacao.presentation.ui.activity.SplashActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.karen.avaliacao.presentation.ui.activity.MenuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
