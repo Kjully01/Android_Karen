@@ -14,7 +14,7 @@ interface ClienteDao {
     suspend fun addClient(cliente: Cliente)
 
     @Query("SELECT * FROM CLIENTE")
-    suspend fun getClient(): List<Cliente>
+    fun getClient(): List<Cliente>
 
     @Query("SELECT * FROM CLIENTE ORDER BY id DESC")
     fun readCliente(): LiveData<List<Cliente>>

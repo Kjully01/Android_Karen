@@ -1,6 +1,7 @@
 package com.karen.avaliacao.presentation.ui.fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -65,14 +66,24 @@ class DataClientFragment : Fragment() {
         setDataAdapter(client.contatos)
     }
 
+//    private fun verifyAccess(){
+//        val clientes = viewModel.getClientLocal()
+//        if(clientes.isNotEmpty()){
+//            firstAccess = false
+//        }
+//    }
+
     private fun observer() {
         viewModel.apply {
-            readCliente.observe(viewLifecycleOwner, Observer{ client ->
-                setView(client[0])
-            })
             clientSuccess.observe(viewLifecycleOwner, Observer { client ->
                 addClient(client.cliente)
-//                setView(client)
+
+                    setView(client.cliente)
+
+            })
+            readCliente.observe(viewLifecycleOwner, Observer { client ->
+                   // setView(client.first())
+
             })
             error.observe(
                 viewLifecycleOwner, Observer {

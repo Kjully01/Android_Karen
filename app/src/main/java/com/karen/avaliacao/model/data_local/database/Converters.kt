@@ -18,4 +18,16 @@ class Converters {
         return listContato
     }
 
+    @TypeConverter
+    fun toJsonLegenda(listLegenda: List<String>?): String {
+        return Gson().toJson(listLegenda)
+    }
+
+    @TypeConverter
+    fun toListLegenda(jsonLegenda: String): List<String> {
+        val objects = Gson().fromJson(jsonLegenda, Array<String>::class.java) as Array<String>
+        val listLegenda = objects.toList()
+        return listLegenda
+    }
+
 }

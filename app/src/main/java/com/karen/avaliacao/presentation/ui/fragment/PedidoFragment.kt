@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.karen.avaliacao.R
 import com.karen.avaliacao.databinding.FragmentPedidoBinding
-import com.karen.avaliacao.model.model.pedido.PedidoResponse
+import com.karen.avaliacao.model.model.pedido.Pedido
 import com.karen.avaliacao.presentation.ui.adapter.PedidoAdapter
 import com.karen.avaliacao.presentation.viewModel.PedidoViewModel
 
@@ -90,15 +90,19 @@ class PedidoFragment : Fragment() {
         }
     }
 
-    private fun setDataAdapter(pedidoList: List<PedidoResponse>) {
+    private fun setDataAdapter(pedidoList: List<Pedido>) {
         adapterPedido.setData(pedidoList)
     }
 
     private fun observer() {
         viewModel.apply {
-            pedidoSuccess.observe(viewLifecycleOwner, Observer { pedido ->
-                val pedidoList = pedido.pedidosResponse
+            getPedido.observe(viewLifecycleOwner, Observer { pedido ->
+                val pedidoList = pedido
                 setDataAdapter(pedidoList)
+            })
+            pedidoSuccess.observe(viewLifecycleOwner, Observer { pedido ->
+//                addPedido(pedido)
+                setDataAdapter(pedido.pedidosResponse)
             })
             error.observe(
                 viewLifecycleOwner, Observer {

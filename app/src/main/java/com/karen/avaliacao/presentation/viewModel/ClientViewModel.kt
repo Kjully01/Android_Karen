@@ -32,15 +32,17 @@ class ClientViewModel(application: Application) : AndroidViewModel(application) 
         readCliente = clientRepositoryLocal.readCliente
     }
 
-    fun addClient(cliente: Cliente){
+    fun addClient(cliente: Cliente) {
         viewModelScope.launch(Dispatchers.IO) {
             clientRepositoryLocal.addCliente(cliente)
         }
     }
 
-    fun getClientLocal(){
-
-    }
+//    fun getClientLocal(): List<Cliente> {
+//        viewModelScope.launch(Dispatchers.IO) {
+//            return@launch clientRepositoryLocal.getCliente()
+//        }
+//    }
 
     fun getClient() {
         viewModelScope.launch(Dispatchers.IO) {

@@ -6,13 +6,16 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.karen.avaliacao.model.data_local.dao.ClienteDao
+import com.karen.avaliacao.model.data_local.dao.PedidoDao
 import com.karen.avaliacao.model.model.cliente.Cliente
+import com.karen.avaliacao.model.model.pedido.Pedido
 
-@Database(entities = [Cliente::class], version = 1, exportSchema = true)
+@Database(entities = [Cliente::class, Pedido::class], version = 1, exportSchema = true)
 @TypeConverters(Converters::class)
 abstract class DatabaseLocal : RoomDatabase(){
 
     abstract fun clientDao(): ClienteDao
+    abstract fun pedidoDao(): PedidoDao
 
     companion object {
         @Volatile

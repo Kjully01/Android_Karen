@@ -12,7 +12,7 @@ class ClienteRepositoryLocal(private val clienteDao: ClienteDao) {
         clienteDao.addClient(cliente)
     }
 
-    suspend fun getCliente(): List<Cliente> {
+    fun getCliente(): List<Cliente> {
         return clienteDao.getClient()
     }
 

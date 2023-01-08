@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.karen.avaliacao.databinding.ItemRecyclerPedidoBinding
-import com.karen.avaliacao.model.model.pedido.PedidoResponse
+import com.karen.avaliacao.model.model.pedido.Pedido
 
 class PedidoAdapter() : RecyclerView.Adapter<PedidoAdapter.ViewHolderPedido>() {
 
-    private var pedidoList: MutableList<PedidoResponse> = arrayListOf()
+    private var pedidoList: MutableList<Pedido> = arrayListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderPedido {
         val itemBinding = ItemRecyclerPedidoBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -23,7 +23,7 @@ class PedidoAdapter() : RecyclerView.Adapter<PedidoAdapter.ViewHolderPedido>() {
     override fun getItemCount(): Int = pedidoList.size
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setData(listAux: List<PedidoResponse>) {
+    fun setData(listAux: List<Pedido>) {
         pedidoList.clear()
         pedidoList.addAll(listAux)
         notifyDataSetChanged()
@@ -32,7 +32,7 @@ class PedidoAdapter() : RecyclerView.Adapter<PedidoAdapter.ViewHolderPedido>() {
     class ViewHolderPedido(private val binding: ItemRecyclerPedidoBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-            fun onBind(pedidoResponse: PedidoResponse){
+            fun onBind(pedidoResponse: Pedido){
                 binding.apply {
                     tvNumPedRca.text = pedidoResponse.numero_ped_Rca.toString()
                     tvNumPedErp.text = pedidoResponse.numero_ped_erp.toString()
