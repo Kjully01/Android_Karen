@@ -38,11 +38,11 @@ class DetailsActivity : AppCompatActivity() {
                 //binding.toolbar.title = "Home"
             }
             R.id.registration -> {
-                currentFragment = AlvaraFragment()
+                currentFragment = PedidoFragment()
                 //binding.toolbar.title = "Cadastrar"
             }
             R.id.favorite -> {
-                currentFragment = PedidoFragment()
+                currentFragment = AlvaraFragment()
                 //binding.toolbar.title = "Favoritos"
             }
         }

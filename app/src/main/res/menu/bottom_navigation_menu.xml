@@ -11,12 +11,12 @@
         android:id="@+id/registration"
         android:enabled="true"
         android:icon="@drawable/ic_maxima_historico_pedidos_ativo"
-        android:title="Cadastrar" />
+        android:title="Pedidos" />
 
     <item
         android:id="@+id/favorite"
         android:enabled="true"
         android:icon="@drawable/ic_maxima_alvara_ativo"
-        android:title="Favoritos" />
+        android:title="Alvará" />
 
 </menu>

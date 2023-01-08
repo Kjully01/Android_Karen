@@ -15,7 +15,7 @@ data class ContatoResponse (
     val tipo: String,
     @SerializedName("time")
     val time: String,
-    @SerializedName("email")
+    @SerializedName("e_mail")
     val email: String,
     @SerializedName("data_nascimento")
     val data_nascimento: String,
