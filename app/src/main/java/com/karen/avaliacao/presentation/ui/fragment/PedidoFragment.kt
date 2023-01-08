@@ -1,11 +1,10 @@
 package com.karen.avaliacao.presentation.ui.fragment
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,12 +18,19 @@ import com.karen.avaliacao.presentation.ui.adapter.ContatoAdapter
 import com.karen.avaliacao.presentation.ui.adapter.PedidoAdapter
 import com.karen.avaliacao.presentation.viewModel.ClientViewModel
 import com.karen.avaliacao.presentation.viewModel.PedidoViewModel
+import kotlinx.android.synthetic.main.activity_details.*
+import kotlinx.android.synthetic.main.activity_details.view.*
 
 class PedidoFragment : Fragment() {
 
     private lateinit var binding: FragmentPedidoBinding
     private lateinit var adapterPedido: PedidoAdapter
     private lateinit var viewModel: PedidoViewModel
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        setHasOptionsMenu(true)
+        super.onCreate(savedInstanceState)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,6 +48,25 @@ class PedidoFragment : Fragment() {
 
         observer()
         startAdapter()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.toolbar_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.home -> {
+                requireActivity().onBackPressed()
+            }
+            R.id.search -> {
+                Toast.makeText(requireContext(), "teste", Toast.LENGTH_SHORT).show()
+//                true
+            }
+//            else -> false
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun startAdapter() {
