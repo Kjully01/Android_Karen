@@ -16,6 +16,8 @@ class ClientViewModel(application: Application) : AndroidViewModel(application) 
     private val clientRepository: ClienteRepository = ClienteRepository()
     private var clientRepositoryLocal: ClienteRepositoryLocal
 
+//    var clientVerify = false
+//    lateinit var clientes: List<Cliente>
     var readCliente: LiveData<List<Cliente>>
 
     private val _clientSuccess: MutableLiveData<ClienteResponse> = MutableLiveData()
@@ -38,9 +40,10 @@ class ClientViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-//    fun getClientLocal(): List<Cliente> {
+//    fun getClientLocal() {
 //        viewModelScope.launch(Dispatchers.IO) {
-//            return@launch clientRepositoryLocal.getCliente()
+//            clientes = clientRepositoryLocal.getCliente()
+//            clientVerify = true
 //        }
 //    }
 
