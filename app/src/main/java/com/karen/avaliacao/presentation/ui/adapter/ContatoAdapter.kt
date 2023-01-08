@@ -2,25 +2,24 @@ package com.karen.avaliacao.presentation.ui.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.karen.avaliacao.databinding.ItemRecyclerContactBinding
 import com.karen.avaliacao.model.data_remote.model.cliente.ContatoResponse
 
-class ContatoAdapter() : RecyclerView.Adapter<ContatoAdapter.ViewHolderAnimals>() {
+class ContatoAdapter() : RecyclerView.Adapter<ContatoAdapter.ViewHolderContact>() {
 
     private var contactList: MutableList<ContatoResponse> = arrayListOf()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ViewHolderAnimals {
-        val itemBinding = ItemRecyclerContactBinding.inflate(LayoutInflater.from(parent.context))
-        return ViewHolderAnimals(itemBinding)
+    ): ViewHolderContact {
+        val itemBinding = ItemRecyclerContactBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ViewHolderContact(itemBinding)
     }
 
-    override fun onBindViewHolder(holder: ViewHolderAnimals, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolderContact, position: Int) {
         holder.onBind(contactList[position])
     }
 
@@ -33,7 +32,7 @@ class ContatoAdapter() : RecyclerView.Adapter<ContatoAdapter.ViewHolderAnimals>(
         notifyDataSetChanged()
     }
 
-    class ViewHolderAnimals(private val binding: ItemRecyclerContactBinding) :
+    class ViewHolderContact(private val binding: ItemRecyclerContactBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun onBind(contatoResponse: ContatoResponse) {

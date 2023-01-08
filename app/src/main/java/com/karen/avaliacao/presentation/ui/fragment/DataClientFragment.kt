@@ -10,7 +10,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.karen.avaliacao.databinding.FragmentDataClientBinding
-import com.karen.avaliacao.model.data_remote.model.cliente.ClienteDataResponse
 import com.karen.avaliacao.model.data_remote.model.cliente.ClienteResponse
 import com.karen.avaliacao.model.data_remote.model.cliente.ContatoResponse
 import com.karen.avaliacao.presentation.ui.adapter.ContatoAdapter
@@ -20,7 +19,7 @@ import com.karen.avaliacao.presentation.viewModel.ClientViewModel
 class DataClientFragment : Fragment() {
 
     private lateinit var binding: FragmentDataClientBinding
-    private lateinit var adapterRecyclerView: ContatoAdapter
+    private lateinit var adapterContact: ContatoAdapter
     private lateinit var viewModel: ClientViewModel
 
     override fun onCreateView(
@@ -42,15 +41,15 @@ class DataClientFragment : Fragment() {
     }
 
     private fun startAdapter() {
-        adapterRecyclerView = ContatoAdapter()
+        adapterContact = ContatoAdapter()
         binding.rvContact.apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = adapterRecyclerView
+            adapter = adapterContact
         }
     }
 
     private fun setDataAdapter(contactList: List<ContatoResponse>) {
-        adapterRecyclerView.setData(contactList)
+        adapterContact.setData(contactList)
     }
 
     private fun setView(client: ClienteResponse) {

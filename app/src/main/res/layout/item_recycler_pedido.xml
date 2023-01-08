@@ -89,6 +89,7 @@
         android:src="@drawable/ic_maxima_legenda_corte"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvClient"
+        android:visibility="invisible"
         tools:visibility="visible" />
 
 
@@ -138,7 +139,7 @@
 
 
     <View
-        android:id="@+id/viewContact"
+        android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginTop="2dp"

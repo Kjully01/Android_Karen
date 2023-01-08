@@ -6,19 +6,19 @@ data class PedidoResponse (
     @SerializedName("numero_ped_Rca")
     val numero_ped_Rca: Int,
     @SerializedName("numero_ped_erp")
-    val numero_ped_erp: Int,
+    val numero_ped_erp: String,
     @SerializedName("codigoCliente")
-    val codigoCliente: Int,
+    val codigoCliente: String,
     @SerializedName("NOMECLIENTE")
-    val NOMECLIENTE: Int,
+    val NOMECLIENTE: String,
     @SerializedName("data")
-    val data: Int,
+    val data: String,
     @SerializedName("status")
-    val status: Int,
+    val status: String,
     @SerializedName("critica")
-    val critica: Int,
+    val critica: String,
     @SerializedName("tipo")
-    val tipo: Int,
+    val tipo: String,
     @SerializedName("legendas")
     val legendas: List<String>
 )
