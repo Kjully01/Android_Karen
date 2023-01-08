@@ -28,7 +28,9 @@
                 android:id="@+id/tvData"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dados do cliente" />
+                android:text="Dados do cliente"
+                style="@style/text_client"
+                />
 
             <View
                 android:id="@+id/view"
@@ -44,37 +46,43 @@
                 android:id="@+id/tvCodRazao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="40795 - Máxima" />
+                tools:text="40795 - Máxima"
+                style="@style/text_client"/>
 
             <TextView
                 android:id="@+id/tvFantasy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Máxima Sistemas" />
+                tools:text="Máxima Sistemas"
+                style="@style/text_client_razao"/>
 
             <TextView
                 android:id="@+id/tvCpf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="039.039.039-61" />
+                tools:text="039.039.039-61"
+                style="@style/text_client"/>
 
             <TextView
                 android:id="@+id/tvCnpj"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="10.766.206/0002-61" />
+                tools:text="10.766.206/0002-61"
+                style="@style/text_client"/>
 
             <TextView
                 android:id="@+id/tvRamo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Panificadora" />
+                tools:text="Panificadora"
+                style="@style/text_client"/>
 
             <TextView
                 android:id="@+id/tvEndereco"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="ROD BR-060" />
+                tools:text="ROD BR-060"
+                style="@style/text_client"/>
 
         </LinearLayout>
 
@@ -101,7 +109,8 @@
                 android:id="@+id/tvContact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Contatos" />
+                android:text="Contatos"
+                style="@style/text_client"/>
 
             <View
                 android:id="@+id/viewContact"

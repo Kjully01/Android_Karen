@@ -14,4 +14,6 @@
     <color name="bottomNavigation">#186096</color>
     <color name="ic_ativo">#FFFFFF</color>
     <color name="ic_inativo">#95B6CF</color>
+
+    <color name="textClient">@color/black</color>
 </resources>

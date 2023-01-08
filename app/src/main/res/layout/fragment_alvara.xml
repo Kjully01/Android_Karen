@@ -26,13 +26,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nada encontrado..." />
+            android:text="Nada encontrado..."
+            style="@style/title_alvara"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Não há alvarás para exibir, \nverifique com o responsável pelo ERP" />
+            android:text="Não há alvarás para exibir, \nverifique com o responsável pelo ERP"
+            style="@style/subtitle_alvara"/>
 
     </LinearLayout>
 

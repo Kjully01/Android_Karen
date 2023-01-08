@@ -29,7 +29,8 @@
         android:layout_marginStart="8dp"
         android:text="N° Ped. RCA/ERP: "
         app:layout_constraintStart_toEndOf="@id/cardIcon"
-        app:layout_constraintTop_toTopOf="@id/cardIcon" />
+        app:layout_constraintTop_toTopOf="@id/cardIcon"
+        style="@style/text_client_label"/>
 
     <TextView
         android:id="@+id/tvNumPedRca"
@@ -37,7 +38,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/tvNumPed"
         app:layout_constraintTop_toTopOf="@id/tvNumPed"
-        tools:text="542180" />
+        tools:text="542180"
+        style="@style/text_client"/>
 
     <TextView
         android:id="@+id/tvDiv"
@@ -45,7 +47,8 @@
         android:layout_height="wrap_content"
         android:text=" / "
         app:layout_constraintStart_toEndOf="@id/tvNumPedRca"
-        app:layout_constraintTop_toTopOf="@id/tvNumPed" />
+        app:layout_constraintTop_toTopOf="@id/tvNumPed"
+        style="@style/text_client"/>
 
     <TextView
         android:id="@+id/tvNumPedErp"
@@ -53,7 +56,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/tvDiv"
         app:layout_constraintTop_toTopOf="@id/tvNumPed"
-        tools:text="6421800987" />
+        tools:text="6421800987"
+        style="@style/text_client"/>
 
 
     <TextView
@@ -62,7 +66,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvNumPed"
-        tools:text="15:18" />
+        tools:text="15:18"
+        style="@style/text_client_label"/>
 
 
     <TextView
@@ -71,7 +76,8 @@
         android:layout_height="wrap_content"
         android:text="Cliente: "
         app:layout_constraintStart_toStartOf="@id/tvNumPed"
-        app:layout_constraintTop_toBottomOf="@id/tvNumPed" />
+        app:layout_constraintTop_toBottomOf="@id/tvNumPed"
+        style="@style/text_client_label"/>
 
     <TextView
         android:id="@+id/tvClientInfo"
@@ -79,7 +85,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/tvClient"
         app:layout_constraintTop_toBottomOf="@id/tvNumPed"
-        tools:text="848246 - A F DA SILVA" />
+        tools:text="848246 - A F DA SILVA"
+        style="@style/text_client"/>
 
 
     <ImageView
@@ -99,7 +106,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/tvNumPed"
         app:layout_constraintTop_toBottomOf="@id/tvClient"
-        tools:text="Processado" />
+        tools:text="Processado"
+        style="@style/text_client"/>
 
     <TextView
         android:id="@+id/tvCritica"
@@ -108,7 +116,8 @@
         android:text="Crítica: "
         app:layout_constraintEnd_toStartOf="@id/tvValor"
         app:layout_constraintStart_toEndOf="@id/tvStatus"
-        app:layout_constraintTop_toTopOf="@id/tvStatus" />
+        app:layout_constraintTop_toTopOf="@id/tvStatus"
+        style="@style/text_client_label"/>
 
     <ImageView
         android:id="@+id/imgCritica"
@@ -127,7 +136,8 @@
         android:text="R$ "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@id/tvValorInfo"
-        app:layout_constraintTop_toTopOf="@id/tvStatus" />
+        app:layout_constraintTop_toTopOf="@id/tvStatus"
+        style="@style/text_client"/>
 
     <TextView
         android:id="@+id/tvValorInfo"
@@ -135,7 +145,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvStatus"
-        tools:text="617,40" />
+        tools:text="617,40"
+        style="@style/text_client"/>
 
 
     <View
