@@ -1,117 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/tvName"
+        style="@style/text_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="Leandro"
-        style="@style/text_client"/>
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Leandro" />
 
     <TextView
         android:id="@+id/tvTel"
+        style="@style/text_client_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Telefone: "
-        app:layout_constraintTop_toBottomOf="@id/tvName"
+        android:text="@string/telefone"
         app:layout_constraintStart_toStartOf="parent"
-        style="@style/text_client_label"/>
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
     <TextView
         android:id="@+id/tvTelInfo"
+        style="@style/text_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="39883889"
-        app:layout_constraintTop_toTopOf="@id/tvTel"
         app:layout_constraintStart_toEndOf="@id/tvTel"
-        style="@style/text_client"/>
+        app:layout_constraintTop_toTopOf="@id/tvTel"
+        tools:text="39883889" />
+
     <ImageView
         android:id="@+id/imgTel"
         android:layout_width="15dp"
         android:layout_height="15dp"
+        android:src="@drawable/ic_maxima_telefone"
         app:layout_constraintStart_toEndOf="@id/tvTelInfo"
-        app:layout_constraintTop_toTopOf="@id/tvTelInfo"
-        android:src="@drawable/ic_maxima_telefone"/>
+        app:layout_constraintTop_toTopOf="@id/tvTelInfo" />
 
     <TextView
         android:id="@+id/tvCel"
+        style="@style/text_client_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Celular: "
-        app:layout_constraintTop_toBottomOf="@id/tvTel"
+        android:text="@string/celular"
         app:layout_constraintStart_toStartOf="parent"
-        style="@style/text_client_label"/>
+        app:layout_constraintTop_toBottomOf="@id/tvTel" />
+
     <TextView
         android:id="@+id/tvCelInfo"
+        style="@style/text_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="62 9 88889888"
-        app:layout_constraintTop_toTopOf="@id/tvCel"
         app:layout_constraintStart_toEndOf="@id/tvCel"
-        style="@style/text_client"/>
+        app:layout_constraintTop_toTopOf="@id/tvCel"
+        tools:text="62 9 88889888" />
+
     <ImageView
         android:id="@+id/imgCel"
         android:layout_width="15dp"
         android:layout_height="15dp"
+        android:src="@drawable/ic_maxima_telefone"
         app:layout_constraintStart_toEndOf="@id/tvCelInfo"
-        app:layout_constraintTop_toTopOf="@id/tvCelInfo"
-        android:src="@drawable/ic_maxima_telefone"/>
+        app:layout_constraintTop_toTopOf="@id/tvCelInfo" />
 
     <TextView
         android:id="@+id/tvConjuge"
+        style="@style/text_client_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cônjuge: "
-        app:layout_constraintTop_toBottomOf="@id/tvCel"
+        android:text="@string/conjuge"
         app:layout_constraintStart_toStartOf="parent"
-        style="@style/text_client_label"/>
+        app:layout_constraintTop_toBottomOf="@id/tvCel" />
+
     <TextView
         android:id="@+id/tvConjugeInfo"
+        style="@style/text_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Lilian"
-        app:layout_constraintTop_toTopOf="@id/tvConjuge"
         app:layout_constraintStart_toEndOf="@id/tvConjuge"
-        style="@style/text_client"/>
+        app:layout_constraintTop_toTopOf="@id/tvConjuge"
+        tools:text="Lilian" />
 
     <TextView
         android:id="@+id/tvTipo"
+        style="@style/text_client_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tipo: "
-        app:layout_constraintTop_toBottomOf="@id/tvConjuge"
+        android:text="@string/tipo"
         app:layout_constraintStart_toStartOf="parent"
-        style="@style/text_client_label"/>
+        app:layout_constraintTop_toBottomOf="@id/tvConjuge" />
+
     <TextView
         android:id="@+id/tvTipoInfo"
+        style="@style/text_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Sócio"
-        app:layout_constraintTop_toTopOf="@id/tvTipo"
         app:layout_constraintStart_toEndOf="@id/tvTipo"
-        style="@style/text_client"/>
+        app:layout_constraintTop_toTopOf="@id/tvTipo"
+        tools:text="Sócio" />
 
     <TextView
         android:id="@+id/tvHobbie"
+        style="@style/text_client_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hobbie: "
-        app:layout_constraintTop_toBottomOf="@id/tvTipo"
+        android:text="@string/hobbie"
         app:layout_constraintStart_toStartOf="parent"
-        style="@style/text_client_label"/>
+        app:layout_constraintTop_toBottomOf="@id/tvTipo" />
+
     <TextView
         android:id="@+id/tvHobbieInfo"
+        style="@style/text_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Flamengo"
-        app:layout_constraintTop_toTopOf="@id/tvHobbie"
         app:layout_constraintStart_toEndOf="@id/tvHobbie"
-        style="@style/text_client"/>
+        app:layout_constraintTop_toTopOf="@id/tvHobbie"
+        tools:text="Flamengo" />
 
 
     <View
@@ -126,81 +133,85 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <TextView
         android:id="@+id/tvEmail"
+        style="@style/text_client_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="E-mail: "
+        android:text="@string/e_mail"
         app:layout_constraintStart_toEndOf="@id/viewSeparator"
-        app:layout_constraintTop_toTopOf="@id/tvTel"
-        style="@style/text_client_label"/>
+        app:layout_constraintTop_toTopOf="@id/tvTel" />
+
     <TextView
         android:id="@+id/tvEmailInfo"
+        style="@style/text_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="leandro@gmail.com"
         app:layout_constraintStart_toEndOf="@id/tvEmail"
         app:layout_constraintTop_toTopOf="@id/tvEmail"
-        style="@style/text_client"/>
+        tools:text="leandro@gmail.com" />
+
     <ImageView
         android:id="@+id/imgEmail"
         android:layout_width="15dp"
         android:layout_height="15dp"
+        android:src="@drawable/ic_maxima_email"
         app:layout_constraintStart_toEndOf="@id/tvEmailInfo"
-        app:layout_constraintTop_toTopOf="@id/tvEmailInfo"
-        android:src="@drawable/ic_maxima_email"/>
+        app:layout_constraintTop_toTopOf="@id/tvEmailInfo" />
 
     <TextView
         android:id="@+id/tvNasc"
+        style="@style/text_client_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Data Nasc.: "
+        android:text="@string/data_nasc"
         app:layout_constraintStart_toEndOf="@id/viewSeparator"
-        app:layout_constraintTop_toTopOf="@id/tvCel"
-        style="@style/text_client_label"/>
+        app:layout_constraintTop_toTopOf="@id/tvCel" />
+
     <TextView
         android:id="@+id/tvDtNascInfo"
+        style="@style/text_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="17/12/1990"
         app:layout_constraintStart_toEndOf="@id/tvNasc"
         app:layout_constraintTop_toTopOf="@id/tvNasc"
-        style="@style/text_client"/>
+        tools:text="17/12/1990" />
 
     <TextView
         android:id="@+id/tvDtNascConjuge"
+        style="@style/text_client_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Data Nasc. Cônjuge: "
+        android:text="@string/data_nasc_conjuge"
         app:layout_constraintStart_toEndOf="@id/viewSeparator"
-        app:layout_constraintTop_toTopOf="@id/tvConjuge"
-        style="@style/text_client_label"/>
+        app:layout_constraintTop_toTopOf="@id/tvConjuge" />
+
     <TextView
         android:id="@+id/tvDtNascConjugeInfo"
+        style="@style/text_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="17/12/1990"
         app:layout_constraintStart_toEndOf="@id/tvDtNascConjuge"
         app:layout_constraintTop_toTopOf="@id/tvDtNascConjuge"
-        style="@style/text_client"/>
+        tools:text="17/12/1990" />
 
     <TextView
         android:id="@+id/tvTime"
+        style="@style/text_client_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time: "
+        android:text="@string/time"
         app:layout_constraintStart_toEndOf="@id/viewSeparator"
-        app:layout_constraintTop_toTopOf="@id/tvTipo"
-        style="@style/text_client_label"/>
+        app:layout_constraintTop_toTopOf="@id/tvTipo" />
+
     <TextView
         android:id="@+id/tvTimeInfo"
+        style="@style/text_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Flamengo"
         app:layout_constraintStart_toEndOf="@id/tvTime"
         app:layout_constraintTop_toTopOf="@id/tvTime"
-        style="@style/text_client"/>
+        tools:text="Flamengo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

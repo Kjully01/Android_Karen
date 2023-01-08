@@ -10,8 +10,8 @@
         android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:elevation="48dp">
+        android:elevation="48dp"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
@@ -19,8 +19,7 @@
             android:layout_height="wrap_content"
             android:background="@color/toolbar"
             app:navigationIconTint="@color/white"
-            app:titleTextColor="@color/white"
-            />
+            app:titleTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -39,9 +38,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/bottomNavigation"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_navigation_menu"
         app:itemIconTint="@drawable/icons_bottom"
-        app:itemTextColor="@drawable/icons_bottom"/>
+        app:itemTextColor="@drawable/icons_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

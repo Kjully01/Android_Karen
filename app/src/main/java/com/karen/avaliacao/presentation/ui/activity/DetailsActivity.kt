@@ -3,14 +3,7 @@ package com.karen.avaliacao.presentation.ui.activity
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.karen.avaliacao.R
@@ -45,7 +38,7 @@ class DetailsActivity : AppCompatActivity() {
 
     private val navListener = NavigationBarView.OnItemSelectedListener { item ->
         when (item.itemId) {
-            R.id.home -> {
+            R.id.data -> {
                 currentFragment = DataClientFragment()
                 binding.toolbar.title = "Dados do cliente"
             }

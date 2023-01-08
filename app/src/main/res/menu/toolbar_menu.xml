@@ -6,14 +6,14 @@
         android:id="@+id/search"
         android:enabled="true"
         android:icon="@drawable/ic_search"
-        android:title="Pesquisar"
+        android:title="@string/pesquisar"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/subtitle"
         android:enabled="true"
         android:icon="@drawable/ic_legenda_campanha"
-        android:title="Legendas"
+        android:title="@string/legendas"
         app:showAsAction="never" />
 
 

@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/background_c_card"
     android:layout_height="match_parent"
+    android:background="@color/background_c_card"
     tools:context=".presentation.ui.fragment.DataClientFragment">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardData"
-        android:background="@color/background_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:background="@color/background_card"
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,11 +26,10 @@
 
             <TextView
                 android:id="@+id/tvData"
+                style="@style/text_client"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dados do cliente"
-                style="@style/text_client"
-                />
+                android:text="@string/dados_do_cliente" />
 
             <View
                 android:id="@+id/view"
@@ -44,45 +43,45 @@
 
             <TextView
                 android:id="@+id/tvCodRazao"
+                style="@style/text_client"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="40795 - Máxima"
-                style="@style/text_client"/>
+                tools:text="40795 - Máxima" />
 
             <TextView
                 android:id="@+id/tvFantasy"
+                style="@style/text_client_razao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Máxima Sistemas"
-                style="@style/text_client_razao"/>
+                tools:text="Máxima Sistemas" />
 
             <TextView
                 android:id="@+id/tvCpf"
+                style="@style/text_client"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="039.039.039-61"
-                style="@style/text_client"/>
+                tools:text="039.039.039-61" />
 
             <TextView
                 android:id="@+id/tvCnpj"
+                style="@style/text_client"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="10.766.206/0002-61"
-                style="@style/text_client"/>
+                tools:text="10.766.206/0002-61" />
 
             <TextView
                 android:id="@+id/tvRamo"
+                style="@style/text_client"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Panificadora"
-                style="@style/text_client"/>
+                tools:text="Panificadora" />
 
             <TextView
                 android:id="@+id/tvEndereco"
+                style="@style/text_client"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="ROD BR-060"
-                style="@style/text_client"/>
+                tools:text="ROD BR-060" />
 
         </LinearLayout>
 
@@ -92,8 +91,8 @@
         android:id="@+id/cardContact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/background_card"
         android:layout_margin="16dp"
+        android:background="@color/background_card"
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,10 +106,10 @@
 
             <TextView
                 android:id="@+id/tvContact"
+                style="@style/text_client"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Contatos"
-                style="@style/text_client"/>
+                android:text="@string/contatos" />
 
             <View
                 android:id="@+id/viewContact"
@@ -140,8 +139,8 @@
         android:id="@+id/btnStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Verificar status do cliente"
         android:layout_marginTop="8dp"
+        android:text="@string/verificar_status_do_cliente"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/cardContact" />

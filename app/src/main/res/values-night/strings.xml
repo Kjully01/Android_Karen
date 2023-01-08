@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dados">Dados</string>
+    <string name="pedidos">Pedidos</string>
+    <string name="alvara">Alvará</string>
+    <string name="posi_o_no_erp_bloqueado">Posição no ERP Bloqueado</string>
+    <string name="icon_montado">M</string>
+    <string name="pedido_com_corte">Pedido com corte</string>
+    <string name="pedido_com_falta">Pedido com falta</string>
+    <string name="pedido_cancelado_no_erp">Pedido Cancelado no ERP</string>
+</resources>

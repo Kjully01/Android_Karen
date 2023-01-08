@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,7 +14,7 @@
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Legendas"
+            android:text="@string/legendas"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,7 +22,8 @@
             android:id="@+id/subtitleStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Status do pedido no ERP"
+            android:layout_marginTop="8dp"
+            android:text="@string/status_do_pedido_no_erp"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
@@ -29,6 +31,7 @@
             android:id="@+id/imgProcessamento"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/background_processamento"
             android:src="@drawable/ic_maxima_em_processamento"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
@@ -38,7 +41,8 @@
             android:id="@+id/tvProcessamento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Em processamento por parte do FV"
+            android:layout_marginStart="8dp"
+            android:text="@string/em_processamento_por_parte_do_fv"
             app:layout_constraintBottom_toBottomOf="@id/imgProcessamento"
             app:layout_constraintStart_toEndOf="@id/imgProcessamento"
             app:layout_constraintTop_toTopOf="@id/imgProcessamento" />
@@ -47,9 +51,10 @@
             android:id="@+id/icRecusado"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/background_recusado"
-            android:text="!"
             android:gravity="center"
+            android:text="@string/icon_alert"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/imgProcessamento" />
@@ -58,7 +63,8 @@
             android:id="@+id/tvRecusado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pedido Recusado pelo ERP"
+            android:layout_marginStart="8dp"
+            android:text="@string/pedido_recusado_pelo_erp"
             app:layout_constraintBottom_toBottomOf="@id/icRecusado"
             app:layout_constraintStart_toEndOf="@id/icRecusado"
             app:layout_constraintTop_toTopOf="@id/icRecusado" />
@@ -67,9 +73,10 @@
             android:id="@+id/icPendente"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/background_pendente"
-            android:text="P"
             android:gravity="center"
+            android:text="@string/icon_pendente"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/icRecusado" />
@@ -78,7 +85,8 @@
             android:id="@+id/tvPendente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Posição no ERP Pendente"
+            android:layout_marginStart="8dp"
+            android:text="@string/posicao_no_erp_pendente"
             app:layout_constraintBottom_toBottomOf="@id/icPendente"
             app:layout_constraintStart_toEndOf="@id/icPendente"
             app:layout_constraintTop_toTopOf="@id/icPendente" />
@@ -87,9 +95,10 @@
             android:id="@+id/icBloqueado"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/background_bloqueado"
-            android:text="B"
             android:gravity="center"
+            android:text="@string/icon_bloqueado"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/icPendente" />
@@ -98,7 +107,8 @@
             android:id="@+id/tvBloqueado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Posição no ERP Bloqueado"
+            android:layout_marginStart="8dp"
+            android:text="@string/posi_o_no_erp_bloqueado"
             app:layout_constraintBottom_toBottomOf="@id/icBloqueado"
             app:layout_constraintStart_toEndOf="@id/icBloqueado"
             app:layout_constraintTop_toTopOf="@id/icBloqueado" />
@@ -107,9 +117,10 @@
             android:id="@+id/icLiberado"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/background_liberado"
-            android:text="L"
             android:gravity="center"
+            android:text="@string/icon_liberado"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/icBloqueado" />
@@ -118,7 +129,8 @@
             android:id="@+id/tvLiberado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Posição no ERP Liberado"
+            android:layout_marginStart="8dp"
+            android:text="@string/posicao_no_erp_liberado"
             app:layout_constraintBottom_toBottomOf="@id/icLiberado"
             app:layout_constraintStart_toEndOf="@id/icLiberado"
             app:layout_constraintTop_toTopOf="@id/icLiberado" />
@@ -127,9 +139,10 @@
             android:id="@+id/icMontado"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/background_montado"
-            android:text="M"
             android:gravity="center"
+            android:text="@string/icon_montado"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/icLiberado" />
@@ -138,7 +151,8 @@
             android:id="@+id/tvMontado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Posição no ERP Montado"
+            android:layout_marginStart="8dp"
+            android:text="@string/posicao_no_erp_montado"
             app:layout_constraintBottom_toBottomOf="@id/icMontado"
             app:layout_constraintStart_toEndOf="@id/icMontado"
             app:layout_constraintTop_toTopOf="@id/icMontado" />
@@ -147,9 +161,10 @@
             android:id="@+id/icFaturado"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/background_faturado"
-            android:text="F"
             android:gravity="center"
+            android:text="@string/icon_faturado"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/icMontado" />
@@ -158,7 +173,8 @@
             android:id="@+id/tvFaturado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Posição no ERP Faturado"
+            android:layout_marginStart="8dp"
+            android:text="@string/posicao_no_erp_faturado"
             app:layout_constraintBottom_toBottomOf="@id/icFaturado"
             app:layout_constraintStart_toEndOf="@id/icFaturado"
             app:layout_constraintTop_toTopOf="@id/icFaturado" />
@@ -167,9 +183,10 @@
             android:id="@+id/icCancelado"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/background_cancelado"
-            android:text="C"
             android:gravity="center"
+            android:text="@string/icon_cancelado"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/icFaturado" />
@@ -178,7 +195,8 @@
             android:id="@+id/tvCancelado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Posição no ERP Cancelado"
+            android:layout_marginStart="8dp"
+            android:text="@string/posicao_no_erp_cancelado"
             app:layout_constraintBottom_toBottomOf="@id/icCancelado"
             app:layout_constraintStart_toEndOf="@id/icCancelado"
             app:layout_constraintTop_toTopOf="@id/icCancelado" />
@@ -187,9 +205,10 @@
             android:id="@+id/icOrcamento"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/background_orcamento"
-            android:text="O"
             android:gravity="center"
+            android:text="@string/icon_orcamento"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/icCancelado" />
@@ -198,7 +217,8 @@
             android:id="@+id/tvOrcamento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Orçamento"
+            android:layout_marginStart="8dp"
+            android:text="@string/orcamento"
             app:layout_constraintBottom_toBottomOf="@id/icOrcamento"
             app:layout_constraintStart_toEndOf="@id/icOrcamento"
             app:layout_constraintTop_toTopOf="@id/icOrcamento" />
@@ -207,7 +227,8 @@
             android:id="@+id/subtitleCritica"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Crítica"
+            android:layout_marginTop="8dp"
+            android:text="@string/critica"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/icOrcamento" />
 
@@ -215,6 +236,7 @@
             android:id="@+id/imgAguardando"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:src="@drawable/ic_maxima_aguardando_critica"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/subtitleCritica" />
@@ -223,7 +245,8 @@
             android:id="@+id/tvAguardando"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aguardando retorno do ERP"
+            android:layout_marginStart="8dp"
+            android:text="@string/aguardando_retorno_do_erp"
             app:layout_constraintBottom_toBottomOf="@id/imgAguardando"
             app:layout_constraintStart_toEndOf="@id/imgAguardando"
             app:layout_constraintTop_toTopOf="@id/imgAguardando" />
@@ -232,6 +255,7 @@
             android:id="@+id/imgSucesso"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:src="@drawable/ic_maxima_critica_sucesso"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/imgAguardando" />
@@ -240,7 +264,8 @@
             android:id="@+id/tvSucesso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sucesso"
+            android:layout_marginStart="8dp"
+            android:text="@string/sucesso"
             app:layout_constraintBottom_toBottomOf="@id/imgSucesso"
             app:layout_constraintStart_toEndOf="@id/imgSucesso"
             app:layout_constraintTop_toTopOf="@id/imgSucesso" />
@@ -249,6 +274,7 @@
             android:id="@+id/imgFalhaParcial"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:src="@drawable/ic_maxima_critica_alerta"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/imgSucesso" />
@@ -257,7 +283,8 @@
             android:id="@+id/tvFalhaParcial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Falha parcial"
+            android:layout_marginStart="8dp"
+            android:text="@string/falha_parcial"
             app:layout_constraintBottom_toBottomOf="@id/imgFalhaParcial"
             app:layout_constraintStart_toEndOf="@id/imgFalhaParcial"
             app:layout_constraintTop_toTopOf="@id/imgFalhaParcial" />
@@ -266,9 +293,10 @@
             android:id="@+id/imgFalhaTotal"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/background_cancelado"
-            android:text="!"
             android:gravity="center"
+            android:text="@string/icon_alert"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/imgFalhaParcial" />
@@ -277,7 +305,8 @@
             android:id="@+id/tvFalhaTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Falha total"
+            android:layout_marginTop="8dp"
+            android:text="@string/falha_total"
             app:layout_constraintBottom_toBottomOf="@id/imgFalhaTotal"
             app:layout_constraintStart_toEndOf="@id/imgFalhaTotal"
             app:layout_constraintTop_toTopOf="@id/imgFalhaTotal" />
@@ -286,7 +315,9 @@
             android:id="@+id/subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Legendas"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/legendas"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/imgFalhaTotal" />
 
@@ -294,6 +325,7 @@
             android:id="@+id/imgCorte"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:src="@drawable/ic_maxima_legenda_corte"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/subtitle" />
@@ -302,7 +334,8 @@
             android:id="@+id/tvCorte"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aguardando retorno do ERP"
+            android:layout_marginStart="8dp"
+            android:text="@string/pedido_com_corte"
             app:layout_constraintBottom_toBottomOf="@id/imgCorte"
             app:layout_constraintStart_toEndOf="@id/imgCorte"
             app:layout_constraintTop_toTopOf="@id/imgCorte" />
@@ -311,6 +344,7 @@
             android:id="@+id/imgFalta"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:src="@drawable/ic_maxima_legenda_falta"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/imgCorte" />
@@ -319,7 +353,8 @@
             android:id="@+id/tvFalta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sucesso"
+            android:layout_marginStart="8dp"
+            android:text="@string/pedido_com_falta"
             app:layout_constraintBottom_toBottomOf="@id/imgFalta"
             app:layout_constraintStart_toEndOf="@id/imgFalta"
             app:layout_constraintTop_toTopOf="@id/imgFalta" />
@@ -328,6 +363,7 @@
             android:id="@+id/imgCanceladoErp"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:src="@drawable/ic_maxima_legenda_cancelamento"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/imgFalta" />
@@ -336,7 +372,8 @@
             android:id="@+id/tvCanceladoErp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Falha parcial"
+            android:layout_marginStart="8dp"
+            android:text="@string/pedido_cancelado_no_erp"
             app:layout_constraintBottom_toBottomOf="@id/imgCanceladoErp"
             app:layout_constraintStart_toEndOf="@id/imgCanceladoErp"
             app:layout_constraintTop_toTopOf="@id/imgCanceladoErp" />
@@ -345,8 +382,8 @@
             android:id="@+id/imgDevolucao"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/ic_maxima_legenda_devolucao"
-            android:text="!"
             android:gravity="center"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
@@ -356,7 +393,8 @@
             android:id="@+id/tvDevolucao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Falha total"
+            android:layout_marginStart="8dp"
+            android:text="@string/pedido_com_devolucao"
             app:layout_constraintBottom_toBottomOf="@id/imgDevolucao"
             app:layout_constraintStart_toEndOf="@id/imgDevolucao"
             app:layout_constraintTop_toTopOf="@id/imgDevolucao" />
@@ -365,8 +403,8 @@
             android:id="@+id/imgTelemarketing"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/ic_maxima_legenda_telemarketing"
-            android:text="!"
             android:gravity="center"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
@@ -376,7 +414,8 @@
             android:id="@+id/tvTelemarketing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Falha total"
+            android:layout_marginStart="8dp"
+            android:text="@string/pedido_feito_pelo_telemarketing"
             app:layout_constraintBottom_toBottomOf="@id/imgTelemarketing"
             app:layout_constraintStart_toEndOf="@id/imgTelemarketing"
             app:layout_constraintTop_toTopOf="@id/imgTelemarketing" />

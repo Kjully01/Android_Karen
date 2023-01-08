@@ -2,21 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/home"
+        android:id="@+id/data"
         android:enabled="true"
         android:icon="@drawable/ic_maxima_pessoa_ativo"
-        android:title="Home" />
+        android:title="@string/dados" />
 
     <item
         android:id="@+id/registration"
         android:enabled="true"
         android:icon="@drawable/ic_maxima_historico_pedidos_ativo"
-        android:title="Pedidos" />
+        android:title="@string/pedidos" />
 
     <item
         android:id="@+id/favorite"
         android:enabled="true"
         android:icon="@drawable/ic_maxima_alvara_ativo"
-        android:title="Alvará" />
+        android:title="@string/alvara" />
 
 </menu>
