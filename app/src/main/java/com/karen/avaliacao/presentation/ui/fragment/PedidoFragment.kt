@@ -1,9 +1,12 @@
 package com.karen.avaliacao.presentation.ui.fragment
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.*
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -57,16 +60,35 @@ class PedidoFragment : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.home -> {
-                requireActivity().onBackPressed()
-            }
             R.id.search -> {
                 Toast.makeText(requireContext(), "teste", Toast.LENGTH_SHORT).show()
-//                true
             }
-//            else -> false
+            R.id.subtitle -> {
+                dialogSubtitle()
+            }
+//            R.id.ic_menu_legendas -> {
+//                val builder = AlertDialog.Builder(requireContext())
+//                builder.setNegativeButton("Fechar") { _, _ ->
+//
+//                }
+//                builder.setView(R.layout.alert_dialog_legendas)
+//                val dialog: AlertDialog = builder.create()
+//                dialog.show()
+//            }
+
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun dialogSubtitle() {
+        val view: View = layoutInflater.inflate(R.layout.subtitle_dialog, null)
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setView(view)
+        builder.setNegativeButton("Fechar", DialogInterface.OnClickListener { dialog, id ->
+
+        })
+        val alert = builder.create()
+        alert.show()
     }
 
     private fun startAdapter() {
