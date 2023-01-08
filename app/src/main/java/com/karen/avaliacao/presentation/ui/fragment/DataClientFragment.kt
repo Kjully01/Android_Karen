@@ -1,5 +1,6 @@
 package com.karen.avaliacao.presentation.ui.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -16,6 +17,8 @@ import com.karen.avaliacao.model.model.cliente.ClienteResponse
 import com.karen.avaliacao.model.model.cliente.Contato
 import com.karen.avaliacao.presentation.ui.adapter.ContatoAdapter
 import com.karen.avaliacao.presentation.viewModel.ClientViewModel
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class DataClientFragment : Fragment() {
@@ -54,8 +57,17 @@ class DataClientFragment : Fragment() {
         adapterContact.setData(contactList)
     }
 
+    @SuppressLint("SimpleDateFormat")
     private fun setView(client: Cliente) {
         binding.apply {
+
+            val dateFormat = SimpleDateFormat("HH:mm")
+            val date = dateFormat.format(Date())
+
+            btnStatus.setOnClickListener {
+                Toast.makeText(requireContext(), "$date - ${client.status}", Toast.LENGTH_LONG).show()
+            }
+
             val codName = "${client.codigo} - ${client.razao_social}"
             tvCodRazao.text = codName
             tvFantasy.text = client.nomeFantasia
@@ -66,23 +78,16 @@ class DataClientFragment : Fragment() {
         setDataAdapter(client.contatos)
     }
 
-//    private fun verifyAccess(){
-//        val clientes = viewModel.getClientLocal()
-//        if(clientes.isNotEmpty()){
-//            firstAccess = false
-//        }
-//    }
-
     private fun observer() {
         viewModel.apply {
             clientSuccess.observe(viewLifecycleOwner, Observer { client ->
                 addClient(client.cliente)
 
-                    setView(client.cliente)
+                setView(client.cliente)
 
             })
             readCliente.observe(viewLifecycleOwner, Observer { client ->
-                   // setView(client.first())
+                // setView(client.first())
 
             })
             error.observe(
