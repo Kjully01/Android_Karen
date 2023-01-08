@@ -16,6 +16,8 @@ class ClientViewModel(application: Application) : AndroidViewModel(application) 
     private val clientRepository: ClienteRepository = ClienteRepository()
     private var clientRepositoryLocal: ClienteRepositoryLocal
 
+    var readCliente: LiveData<List<Cliente>>
+
     private val _clientSuccess: MutableLiveData<ClienteResponse> = MutableLiveData()
     val clientSuccess: LiveData<ClienteResponse> = _clientSuccess
 
@@ -27,12 +29,17 @@ class ClientViewModel(application: Application) : AndroidViewModel(application) 
             application
         ).clientDao()
         clientRepositoryLocal = ClienteRepositoryLocal(clienteDao)
+        readCliente = clientRepositoryLocal.readCliente
     }
 
     fun addClient(cliente: Cliente){
         viewModelScope.launch(Dispatchers.IO) {
             clientRepositoryLocal.addCliente(cliente)
         }
+    }
+
+    fun getClientLocal(){
+
     }
 
     fun getClient() {

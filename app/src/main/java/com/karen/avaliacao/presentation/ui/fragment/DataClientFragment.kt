@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.karen.avaliacao.databinding.FragmentDataClientBinding
+import com.karen.avaliacao.model.model.cliente.Cliente
 import com.karen.avaliacao.model.model.cliente.ClienteResponse
 import com.karen.avaliacao.model.model.cliente.Contato
 import com.karen.avaliacao.presentation.ui.adapter.ContatoAdapter
@@ -52,23 +53,26 @@ class DataClientFragment : Fragment() {
         adapterContact.setData(contactList)
     }
 
-    private fun setView(client: ClienteResponse) {
+    private fun setView(client: Cliente) {
         binding.apply {
-            val codName = "${client.cliente.codigo} - ${client.cliente.razao_social}"
+            val codName = "${client.codigo} - ${client.razao_social}"
             tvCodRazao.text = codName
-            tvFantasy.text = client.cliente.nomeFantasia
-            tvCnpj.text = client.cliente.cnpj
-            tvRamo.text = client.cliente.ramo_atividade
-            tvEndereco.text = client.cliente.endereco
+            tvFantasy.text = client.nomeFantasia
+            tvCnpj.text = client.cnpj
+            tvRamo.text = client.ramo_atividade
+            tvEndereco.text = client.endereco
         }
-        setDataAdapter(client.cliente.contatos)
+        setDataAdapter(client.contatos)
     }
 
     private fun observer() {
         viewModel.apply {
+            readCliente.observe(viewLifecycleOwner, Observer{ client ->
+                setView(client[0])
+            })
             clientSuccess.observe(viewLifecycleOwner, Observer { client ->
                 addClient(client.cliente)
-                setView(client)
+//                setView(client)
             })
             error.observe(
                 viewLifecycleOwner, Observer {
