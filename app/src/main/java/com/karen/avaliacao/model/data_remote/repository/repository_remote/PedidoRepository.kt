@@ -1,10 +1,7 @@
-package com.karen.avaliacao.model.data_remote.model.repository
+package com.karen.avaliacao.model.data_remote.repository.repository_remote
 
 import com.karen.avaliacao.model.data_remote.api.Api
-import com.karen.avaliacao.model.data_remote.model.cliente.ClienteDataResponse
-import com.karen.avaliacao.model.data_remote.model.cliente.ClienteResponse
-import com.karen.avaliacao.model.data_remote.model.pedido.PedidoListResponse
-import com.karen.avaliacao.model.data_remote.model.pedido.PedidoResponse
+import com.karen.avaliacao.model.model.pedido.PedidoListResponse
 import com.karen.avaliacao.utils.Constants
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

@@ -1,4 +1,4 @@
-package com.karen.avaliacao.model.data_remote.model.pedido
+package com.karen.avaliacao.model.model.pedido
 
 import com.google.gson.annotations.SerializedName
 

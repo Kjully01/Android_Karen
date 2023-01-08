@@ -1,8 +1,8 @@
-package com.karen.avaliacao.model.data_remote.model.cliente
+package com.karen.avaliacao.model.model.cliente
 
 import com.google.gson.annotations.SerializedName
 
-data class ContatoResponse (
+data class Contato (
     @SerializedName("nome")
     val nome: String,
     @SerializedName("telefone")

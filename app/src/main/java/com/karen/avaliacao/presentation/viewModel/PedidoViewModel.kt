@@ -4,10 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.karen.avaliacao.model.data_remote.model.cliente.ClienteResponse
-import com.karen.avaliacao.model.data_remote.model.pedido.PedidoListResponse
-import com.karen.avaliacao.model.data_remote.model.pedido.PedidoResponse
-import com.karen.avaliacao.model.data_remote.model.repository.PedidoRepository
+import com.karen.avaliacao.model.model.pedido.PedidoListResponse
+import com.karen.avaliacao.model.data_remote.repository.repository_remote.PedidoRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch

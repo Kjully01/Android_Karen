@@ -1,7 +1,7 @@
 package com.karen.avaliacao.model.data_remote.api
 
-import com.karen.avaliacao.model.data_remote.model.cliente.ClienteResponse
-import com.karen.avaliacao.model.data_remote.model.pedido.PedidoListResponse
+import com.karen.avaliacao.model.model.cliente.ClienteResponse
+import com.karen.avaliacao.model.model.pedido.PedidoListResponse
 import retrofit2.Response
 import retrofit2.http.GET
 

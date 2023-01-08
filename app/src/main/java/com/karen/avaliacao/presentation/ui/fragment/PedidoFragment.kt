@@ -3,26 +3,17 @@ package com.karen.avaliacao.presentation.ui.fragment
 import android.content.DialogInterface
 import android.os.Bundle
 import android.view.*
-import android.widget.Button
 import androidx.fragment.app.Fragment
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.karen.avaliacao.R
-import com.karen.avaliacao.databinding.FragmentDataClientBinding
 import com.karen.avaliacao.databinding.FragmentPedidoBinding
-import com.karen.avaliacao.model.data_remote.model.cliente.ContatoResponse
-import com.karen.avaliacao.model.data_remote.model.pedido.PedidoListResponse
-import com.karen.avaliacao.model.data_remote.model.pedido.PedidoResponse
-import com.karen.avaliacao.presentation.ui.adapter.ContatoAdapter
+import com.karen.avaliacao.model.model.pedido.PedidoResponse
 import com.karen.avaliacao.presentation.ui.adapter.PedidoAdapter
-import com.karen.avaliacao.presentation.viewModel.ClientViewModel
 import com.karen.avaliacao.presentation.viewModel.PedidoViewModel
-import kotlinx.android.synthetic.main.activity_details.*
-import kotlinx.android.synthetic.main.activity_details.view.*
 
 class PedidoFragment : Fragment() {
 

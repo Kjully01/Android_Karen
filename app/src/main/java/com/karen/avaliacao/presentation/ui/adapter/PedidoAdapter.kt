@@ -5,8 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.karen.avaliacao.databinding.ItemRecyclerPedidoBinding
-import com.karen.avaliacao.model.data_remote.model.pedido.PedidoListResponse
-import com.karen.avaliacao.model.data_remote.model.pedido.PedidoResponse
+import com.karen.avaliacao.model.model.pedido.PedidoResponse
 
 class PedidoAdapter() : RecyclerView.Adapter<PedidoAdapter.ViewHolderPedido>() {
 

@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.karen.avaliacao.databinding.ItemRecyclerContactBinding
-import com.karen.avaliacao.model.data_remote.model.cliente.ContatoResponse
+import com.karen.avaliacao.model.model.cliente.Contato
 
 class ContatoAdapter() : RecyclerView.Adapter<ContatoAdapter.ViewHolderContact>() {
 
-    private var contactList: MutableList<ContatoResponse> = arrayListOf()
+    private var contactList: MutableList<Contato> = arrayListOf()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -26,7 +26,7 @@ class ContatoAdapter() : RecyclerView.Adapter<ContatoAdapter.ViewHolderContact>(
     override fun getItemCount(): Int = contactList.size
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setData(listAux: List<ContatoResponse>) {
+    fun setData(listAux: List<Contato>) {
         contactList.clear()
         contactList.addAll(listAux)
         notifyDataSetChanged()
@@ -35,7 +35,7 @@ class ContatoAdapter() : RecyclerView.Adapter<ContatoAdapter.ViewHolderContact>(
     class ViewHolderContact(private val binding: ItemRecyclerContactBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun onBind(contatoResponse: ContatoResponse) {
+        fun onBind(contatoResponse: Contato) {
             binding.apply {
                 tvTelInfo.text = contatoResponse.telefone
                 tvCelInfo.text = contatoResponse.celular
