@@ -1,5 +1,6 @@
 package com.karen.avaliacao.presentation.ui.activity
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -23,6 +24,7 @@ class DetailsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailsBinding
     private var currentFragment: Fragment = DataClientFragment()
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -33,6 +35,7 @@ class DetailsActivity : AppCompatActivity() {
         val actionBar = supportActionBar
 
         actionBar?.setDisplayHomeAsUpEnabled(true)
+        binding.toolbar.overflowIcon = getDrawable(R.drawable.ic_baseline_more_vert_24)
 
         supportFragmentManager.beginTransaction().replace(R.id.navHost, DataClientFragment())
             .commit()
