@@ -7,8 +7,10 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardIcon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="25dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,8 +18,8 @@
 
         <ImageView
             android:id="@+id/imgProcessamento"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:background="@drawable/background_processamento"
             android:src="@drawable/ic_maxima_em_processamento"
             android:visibility="gone"
@@ -25,8 +27,8 @@
 
         <TextView
             android:id="@+id/icRecusado"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:background="@drawable/background_recusado"
             android:gravity="center"
             android:text="@string/icon_alert"
@@ -36,8 +38,8 @@
 
         <TextView
             android:id="@+id/icPendente"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:background="@drawable/background_pendente"
             android:gravity="center"
             android:text="@string/icon_pendente"
@@ -47,8 +49,8 @@
 
         <TextView
             android:id="@+id/icBloqueado"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:background="@drawable/background_bloqueado"
             android:gravity="center"
             android:text="@string/icon_bloqueado"
@@ -58,8 +60,8 @@
 
         <TextView
             android:id="@+id/icLiberado"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:background="@drawable/background_liberado"
             android:gravity="center"
             android:text="@string/icon_liberado"
@@ -69,8 +71,8 @@
 
         <TextView
             android:id="@+id/icMontado"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:background="@drawable/background_montado"
             android:gravity="center"
             android:text="@string/icon_montado"
@@ -80,8 +82,8 @@
 
         <TextView
             android:id="@+id/icFaturado"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:background="@drawable/background_faturado"
             android:gravity="center"
             android:text="@string/icon_faturado"
@@ -91,8 +93,8 @@
 
         <TextView
             android:id="@+id/icCancelado"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:background="@drawable/background_cancelado"
             android:gravity="center"
             android:text="@string/icon_cancelado"
@@ -102,8 +104,8 @@
 
         <TextView
             android:id="@+id/icOrcamento"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:background="@drawable/background_orcamento"
             android:gravity="center"
             android:text="@string/icon_orcamento"
@@ -156,6 +158,7 @@
         style="@style/text_client_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvNumPed"
         tools:text="15:18" />
@@ -166,6 +169,7 @@
         style="@style/text_client_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/cliente"
         app:layout_constraintStart_toStartOf="@id/tvNumPed"
         app:layout_constraintTop_toBottomOf="@id/tvNumPed" />
@@ -175,6 +179,7 @@
         style="@style/text_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toEndOf="@id/tvClient"
         app:layout_constraintTop_toBottomOf="@id/tvNumPed"
         tools:text="848246 - A F DA SILVA" />
@@ -184,6 +189,7 @@
         android:id="@+id/imgLegenda"
         android:layout_width="20dp"
         android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
         android:src="@drawable/ic_maxima_legenda_corte"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -196,6 +202,7 @@
         style="@style/text_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@id/tvNumPed"
         app:layout_constraintTop_toBottomOf="@id/tvClient"
         tools:text="Processado" />
@@ -211,13 +218,48 @@
         app:layout_constraintTop_toTopOf="@id/tvStatus" />
 
     <ImageView
-        android:id="@+id/imgCritica"
+        android:id="@+id/imgCriticaAguardando"
         android:layout_width="20dp"
         android:layout_height="20dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/tvCritica"
         app:layout_constraintStart_toEndOf="@id/tvCritica"
         app:layout_constraintTop_toTopOf="@id/tvCritica"
         tools:src="@drawable/ic_maxima_aguardando_critica" />
+
+    <ImageView
+        android:id="@+id/imgCriticaSucesso"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/tvCritica"
+        app:layout_constraintStart_toEndOf="@id/tvCritica"
+        app:layout_constraintTop_toTopOf="@id/tvCritica"
+        tools:src="@drawable/ic_maxima_critica_sucesso" />
+
+    <ImageView
+        android:id="@+id/imgCriticaFalhaP"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/tvCritica"
+        app:layout_constraintStart_toEndOf="@id/tvCritica"
+        app:layout_constraintTop_toTopOf="@id/tvCritica"
+        tools:src="@drawable/ic_maxima_critica_alerta" />
+
+    <TextView
+        android:id="@+id/imgCriticaFalhaT"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_cancelado"
+        android:gravity="center"
+        android:text="@string/icon_alert"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/tvCritica"
+        app:layout_constraintStart_toEndOf="@id/tvCritica"
+        app:layout_constraintTop_toTopOf="@id/tvCritica" />
 
 
     <TextView
@@ -235,6 +277,7 @@
         style="@style/text_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvStatus"
         tools:text="617,40" />

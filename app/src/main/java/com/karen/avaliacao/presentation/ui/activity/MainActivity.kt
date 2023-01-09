@@ -1,5 +1,6 @@
 package com.karen.avaliacao.presentation.ui.activity
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         setView()
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setView() {
         binding.apply {
             btnClient.apply {
@@ -38,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 imgButton.setImageResource(R.drawable.ic_maxima_resumo_vendas)
                 tvButton.text = "Resumo de vendas"
                 card.setOnClickListener {
-                    Toast.makeText(this@MainActivity, "Teste", Toast.LENGTH_LONG).show()
+                    message()
                 }
             }
         }
@@ -47,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 imgButton.setImageResource(R.drawable.ic_maxima_pedido)
                 tvButton.text = "Pedidos"
                 card.setOnClickListener {
-                    Toast.makeText(this@MainActivity, "Teste", Toast.LENGTH_LONG).show()
+                    message()
                 }
             }
         }
@@ -56,10 +58,14 @@ class MainActivity : AppCompatActivity() {
                 imgButton.setImageResource(R.drawable.ic_maxima_ferramentas)
                 tvButton.text = "Feramentas"
                 card.setOnClickListener {
-                    Toast.makeText(this@MainActivity, "Teste", Toast.LENGTH_LONG).show()
+                    message()
                 }
             }
         }
+    }
+
+    fun message(){
+        Toast.makeText(this@MainActivity, "Funcionalidade não habilitada", Toast.LENGTH_LONG).show()
     }
 
 }

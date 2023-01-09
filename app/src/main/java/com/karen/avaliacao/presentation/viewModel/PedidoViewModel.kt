@@ -33,13 +33,13 @@ class PedidoViewModel(application: Application) : AndroidViewModel(application) 
         getPedido = pedidoRepositoryLocal.getPedido
     }
 
-//    fun addPedido(pedidos: PedidoListResponse) {
-//        viewModelScope.launch(Dispatchers.IO) {
-//            pedidos.pedidosResponse.forEach {
-//                pedidoRepositoryLocal.addPedido(it)
-//            }
-//        }
-//    }
+    fun addPedido(pedidos: PedidoListResponse) {
+        viewModelScope.launch(Dispatchers.IO) {
+            pedidos.pedidosResponse.forEach {
+                pedidoRepositoryLocal.addPedido(it)
+            }
+        }
+    }
 
     fun getPedidos() {
         viewModelScope.launch(Dispatchers.IO) {

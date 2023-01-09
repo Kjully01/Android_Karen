@@ -9,7 +9,7 @@ import com.karen.avaliacao.model.model.pedido.Pedido
 
 @Dao
 interface PedidoDao {
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addPedido(pedido: Pedido)
 
     @Query("SELECT * FROM PEDIDO")

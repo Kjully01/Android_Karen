@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.karen.avaliacao.databinding.ItemRecyclerPedidoBinding
 import com.karen.avaliacao.model.model.pedido.Pedido
+import java.text.SimpleDateFormat
+import java.util.*
 
 class PedidoAdapter() : RecyclerView.Adapter<PedidoAdapter.ViewHolderPedido>() {
 
@@ -47,14 +49,6 @@ class PedidoAdapter() : RecyclerView.Adapter<PedidoAdapter.ViewHolderPedido>() {
                 icCancelado.visibility = View.GONE
                 icOrcamento.visibility = View.GONE
 
-                tvNumPedRca.text = pedidoResponse.numero_ped_Rca.toString()
-                tvNumPedErp.text = pedidoResponse.numero_ped_erp.toString()
-
-                val codName = pedidoResponse.codigoCliente + " - " + pedidoResponse.NOMECLIENTE
-                tvClientInfo.text = codName
-
-                tvStatus.text = pedidoResponse.status
-
                 if (pedidoResponse.tipo == "ORCAMENTO") {
                     icOrcamento.visibility = View.VISIBLE
                 } else {
@@ -62,15 +56,40 @@ class PedidoAdapter() : RecyclerView.Adapter<PedidoAdapter.ViewHolderPedido>() {
                         "Em processamento" -> binding.imgProcessamento.visibility = View.VISIBLE
                         "Pendente" -> binding.icPendente.visibility = View.VISIBLE
                         else -> {
-                            binding.icLiberado.visibility = View.VISIBLE
+                            if (pedidoResponse.legendas.isNullOrEmpty()) {
+                                binding.icLiberado.visibility = View.VISIBLE
+                            } else {
+                                pedidoResponse.legendas.forEach {
+                                    when (it) {
+                                        "PEDIDO_SOFREU_CORTE" -> {
+                                            binding.icRecusado.visibility =
+                                                View.VISIBLE
+                                            binding.imgLegenda.visibility = View.VISIBLE
+                                        }
+                                        "PEDIDO_CANCELADO_ERP" -> binding.icCancelado.visibility =
+                                            View.VISIBLE
+                                    }
+                                }
+                            }
+
                         }
                     }
-
-                    //imgCritica
-                    tvHora.text = pedidoResponse.data
-                    //imgLegenda
-                    //tvValorInfo.text = pedidoResponse.
                 }
+
+                when (pedidoResponse.critica) {
+                    "FALHA_PARCIAL" -> imgCriticaFalhaP.visibility = View.VISIBLE
+                    "FALHA_TOTAL" -> imgCriticaFalhaT.visibility = View.VISIBLE
+                }
+
+                tvNumPedRca.text = pedidoResponse.numero_ped_Rca.toString()
+                tvNumPedErp.text = pedidoResponse.numero_ped_erp
+
+                val codName = pedidoResponse.codigoCliente + " - " + pedidoResponse.NOMECLIENTE
+                tvClientInfo.text = codName
+
+                tvStatus.text = pedidoResponse.status
+                tvHora.text = pedidoResponse.data
+
             }
 
         }
