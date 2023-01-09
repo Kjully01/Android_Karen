@@ -1,9 +1,11 @@
 package com.karen.avaliacao.presentation.ui.adapter
 
 import android.annotation.SuppressLint
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.karen.avaliacao.databinding.ItemRecyclerPedidoBinding
 import com.karen.avaliacao.model.model.pedido.Pedido
@@ -20,6 +22,7 @@ class PedidoAdapter() : RecyclerView.Adapter<PedidoAdapter.ViewHolderPedido>() {
         return ViewHolderPedido(itemBinding)
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: ViewHolderPedido, position: Int) {
         holder.onBind(pedidoList[position])
     }
@@ -36,6 +39,8 @@ class PedidoAdapter() : RecyclerView.Adapter<PedidoAdapter.ViewHolderPedido>() {
     class ViewHolderPedido(private val binding: ItemRecyclerPedidoBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        @SuppressLint("SimpleDateFormat")
+        @RequiresApi(Build.VERSION_CODES.O)
         fun onBind(pedidoResponse: Pedido) {
             binding.apply {
 
@@ -88,10 +93,24 @@ class PedidoAdapter() : RecyclerView.Adapter<PedidoAdapter.ViewHolderPedido>() {
                 tvClientInfo.text = codName
 
                 tvStatus.text = pedidoResponse.status
-                tvHora.text = pedidoResponse.data
 
+                val json =
+                    pedidoResponse.data.replace("T".toRegex(), " ").replace("Z".toRegex(), "")
+                val formatoData = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+                val dataFormatada = Date(formatoData.parse(json).time)
+
+                val date = Calendar.getInstance().time
+                val dateNow = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+                if (dateNow.format(date) == dateNow.format((dataFormatada))) {
+                    val timeFormat = SimpleDateFormat("hh:mm", Locale.getDefault())
+                    val dataFinish = timeFormat.format(dataFormatada)
+                    tvHora.text = dataFinish
+                } else {
+                    val dateFormat = SimpleDateFormat("dd MMM", Locale.getDefault())
+                    val dataFinish = dateFormat.format(dataFormatada)
+                    tvHora.text = dataFinish
+                }
             }
-
         }
     }
 }
