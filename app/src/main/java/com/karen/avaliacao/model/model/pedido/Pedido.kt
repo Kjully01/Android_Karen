@@ -39,7 +39,7 @@ data class Pedido(
     @ColumnInfo(name = "tipo")
     val tipo: String,
 
-//    @SerializedName("legendas")
-//    @ColumnInfo(name = "codigo")
-//    val legendas: List<String>
+    @SerializedName("legendas")
+    @ColumnInfo(name = "legendas")
+    val legendas: List<String>
 )

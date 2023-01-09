@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_c_card"
+    android:padding="8dp"
     tools:context=".presentation.ui.fragment.DataClientFragment">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:background="@color/background_card"
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,7 +91,7 @@
         android:id="@+id/cardContact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginTop="8dp"
         android:background="@color/background_card"
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -135,11 +135,12 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/custom_button"
         android:text="@string/verificar_status_do_cliente"
         android:textAllCaps="false"
         android:textColor="@color/white"
