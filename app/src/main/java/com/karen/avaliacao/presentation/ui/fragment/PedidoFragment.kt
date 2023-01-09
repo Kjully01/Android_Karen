@@ -97,10 +97,9 @@ class PedidoFragment : Fragment() {
     }
 
     private fun observer() {
-//        networkChecker.performActionIfConnect {
+
         viewModel.apply {
             pedidoSuccess.observe(viewLifecycleOwner, Observer { pedido ->
-//                    addPedido(pedido)
                 setDataAdapter(pedido.pedidosResponse)
             })
             error.observe(
@@ -109,19 +108,5 @@ class PedidoFragment : Fragment() {
                 }
             )
         }
-//        }
-
-//        networkChecker.performActionIfNotConnect {
-//            viewModel.apply {
-//                getPedido.observe(viewLifecycleOwner, Observer { pedido ->
-//                    setDataAdapter(pedido)
-//                })
-//                error.observe(
-//                    viewLifecycleOwner, Observer {
-//                        Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
-//                    }
-//                )
-//            }
-//        }
     }
 }
