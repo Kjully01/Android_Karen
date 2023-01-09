@@ -8,4 +8,5 @@
     <string name="pedido_com_corte">Pedido com corte</string>
     <string name="pedido_com_falta">Pedido com falta</string>
     <string name="pedido_cancelado_no_erp">Pedido Cancelado no ERP</string>
+    <string name="versao">v.1.0.0</string>
 </resources>
